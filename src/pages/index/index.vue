@@ -1,5 +1,10 @@
 <template>
 	<view class="content">
+		<headerBar :isBack="true" title="我的" titleTintColor="#fff" :bgColor="{background: '#353535'}">
+			<text slot="back" class="uni_btnIco iconfont icon-close"></text>
+			<text slot="iconfont" class="uni_btnIco iconfont icon-search"></text>
+			<text slot="string" class="uni_btnString" style="color: #2B9939;">添加好友</text>
+		</headerBar>11
 		<image class="logo" src="/static/logo.png"></image>
 		<view>
 			<text class="title">{{title}}</text>
@@ -12,7 +17,10 @@
 
 		<!-- 修改颜色 -->
 		<uni-countdown color="#FFFFFF" background-color="#00B26A" border-color="#00B26A" :day="1" :hour="2" :minute="30" :second="0"></uni-countdown>
+		<view class="uni-p-b-98"></view>
+        <tabBar :pagePath="'/pages/tabBar/home/home'"></tabBar>
 	</view>
+	
 </template>
 
 <script>
