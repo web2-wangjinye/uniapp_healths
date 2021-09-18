@@ -36,5 +36,6 @@ import Vue from 'vue'
 <style>
 	/*每个页面公共css */
 	@import './common/css/font-icon.css';
+	/* @import './common/css/uni.css'; */
 	@import './common/css/uni-common.scss';
 </style>

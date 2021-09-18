@@ -1,3 +1,64 @@
 .uni-p-b-98{
     padding-bottom: 98rpx;
 }
+/* 标题 */
+// .uni-h1 {font-size: 80rpx; font-weight:700;}
+// .uni-h2 {font-size: 60rpx; font-weight:700;}
+// .uni-h3 {font-size: 48rpx; font-weight:700;}
+// .uni-h4 {font-size: 36rpx; font-weight:700;}
+// .uni-h5 {font-size: 28rpx; color: #8f8f94;}
+// .uni-h6 {font-size: 24rpx; color: #8f8f94;}
+// .uni-bold{font-weight:bold;}
+
+/* 文本溢出隐藏 */
+.uni-ellipsis {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.uni-ellipsistwo{
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.uni-flex {
+	display: flex;
+	flex-direction: row;
+}
+.uni-flex-item {
+	flex: 1;
+    overflow: hidden;
+}
+.uni-row {
+	flex-direction: row;
+}
+.uni-column {
+	flex-direction: column;
+}
+.uni-center{
+	text-align:center;
+}
+
+.uni-inline-item{
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+}
+
+.uni-fixed{
+    position: fixed;
+    left: 0px;
+    top:0px;
+    width: 100%;
+    z-index: 100;
+}
+
+.uni_icoBack{
+    font-size: 16px;
+    padding: 0px 10px;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+}
+

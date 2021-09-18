@@ -10,7 +10,21 @@
 		{
 			"path": "pages/shop/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "uni-app",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance":0,
+				"app-plus": { 
+                    "pullToRefresh": { 
+                        "style": "circle",
+                        "color": "#FF9D00"
+                    }
+                }
+			}
+		},
+		{
+			"path": "pages/shop/gooddetail/index",
+			"style": {
+				"navigationBarTitleText": "详情"
 			}
 		},
 		{

@@ -1,28 +1,29 @@
 <template>
     <view class="uni_topbar" :style="style">
-        <view class="inner flexbox flex_alignc" :class="[fixed ? 'fixed' : '']" :style="[{'height': customBarH + 'px', 'padding-top': statusBarH + 'px', 'color': titleTintColor}, bgColor]">
+        <view class="uni-inline-item" :class="[fixed ? 'uni-fixed' : '']" :style="[{'height': customBarH + 'px', 'padding-top': statusBarH + 'px', 'color': titleTintColor}, bgColor]">
             <!-- 返回 -->
             <!-- <text class="uni_icoBack iconfont icon-arrL" v-if="isBack" @tap="goBack"></text> -->
+            <!-- <text slot="back" class="uni_icoBack icon icon-zuojiantou"></text> -->
             <view v-if="isBack" @tap="goBack">
                 <slot name="back"></slot>
             </view>
-            <slot name="headerL"></slot>
+            <!-- <slot name="headerL"></slot> -->
             <!-- 标题 -->
             <!-- #ifndef MP -->
-            <view class="flex1" v-if="!search && center"></view>
+            <!-- <view class="flex1" v-if="!search && center"></view> -->
             <!-- #endif -->
-            <view class="uni_title flex1" :class="[center ? 'uni_titleCenter' : '']" :style="[isBack ? {'font-size': '32upx', 'padding-left': '0'} : '']" v-if="!search && title">
+            <view class="uni-flex-item" :class="[center ? 'uni-center' : '']" :style="[isBack ? {'font-size': '32rpx', 'padding-left': '0'} : '']" v-if="!search && title">
                 {{title}}
             </view>
-            <view class="uni_search flex1" :class="[searchRadius ? 'uni_searchRadius' : '']" v-if="search"> />
+            <!-- <view class="uni_search flex1" :class="[searchRadius ? 'uni_searchRadius' : '']" v-if="search"> />
                 <input class="uni_searchIpt flex1" type="text" placeholder="搜索" placeholder-style="color: rgba(255,255,255,.5);" />
-            </view>
+            </view> -->
             <!-- 右侧 -->
-            <view class="uni_headerRight flexbox flex_row flex_alignc">
+            <!-- <view class="uni_headerRight flexbox flex_row flex_alignc">
                 <slot name="iconfont"></slot>
                 <slot name="string"></slot>
                 <slot name="image"></slot>
-            </view>
+            </view> -->
         </view>
     </view>
 </template>
@@ -63,7 +64,9 @@
         methods: {
             goBack() {
                 uni.navigateBack()
-            }
+            } 
         }
     }
 </script>
+<style lang="scss" scoped>
+</style>
