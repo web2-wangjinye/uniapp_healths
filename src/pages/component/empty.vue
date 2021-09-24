@@ -1,7 +1,7 @@
 <template>
 	<view class='uni-empty' :style="{marginTop:top+'rpx'}">
-		<!-- <image src="../static/null.png" :style="{width:width+'rpx',height:height+'rpx'}" mode=""></image> -->
-        <view class="icon icon-wushuju"></view>
+		<image src="@/static/svg/nodata.svg" :style="{width:width+'rpx',height:height+'rpx'}" mode=""></image>
+        <!-- <view class="icon icon-wushuju"></view> -->
 		<view class="">{{text}}</view>
 	</view>
 </template>
@@ -11,7 +11,7 @@
 		props:{
 			top:{
 				type:String,
-				default: '0'
+				default: '50'
 			},
 			text:{
 				type:String,
@@ -23,7 +23,7 @@
 			},
 			height:{
 				type:String,
-				default:'310'
+				default:'250'
 			}
 		},
 		data() {
@@ -49,8 +49,8 @@
     text-align: center;
     padding: 20rpx;
     .icon-wushuju{
-        font-size: 100rpx;
-        margin-bottom:10rpx
+        font-size: 140rpx;
+        margin-bottom:10rpx;
     }
 }
 

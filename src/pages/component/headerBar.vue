@@ -12,18 +12,18 @@
             <!-- #ifndef MP -->
             <!-- <view class="flex1" v-if="!search && center"></view> -->
             <!-- #endif -->
-            <view class="uni-flex-item" :class="[center ? 'uni-center' : '']" :style="[isBack ? {'font-size': '32rpx', 'padding-left': '0'} : '']" v-if="!search && title">
+            <view class="uni-flex-item" :class="[center ? 'uni-center' : '']" :style="[isBack ? {'font-size': '32rpx', 'padding-left': '72rpx'} : '']" v-if="!search && title">
                 {{title}}
             </view>
             <!-- <view class="uni_search flex1" :class="[searchRadius ? 'uni_searchRadius' : '']" v-if="search"> />
                 <input class="uni_searchIpt flex1" type="text" placeholder="搜索" placeholder-style="color: rgba(255,255,255,.5);" />
             </view> -->
             <!-- 右侧 -->
-            <!-- <view class="uni_headerRight flexbox flex_row flex_alignc">
+            <view class="uni_headerRight uni-inline-item">
                 <slot name="iconfont"></slot>
                 <slot name="string"></slot>
                 <slot name="image"></slot>
-            </view> -->
+            </view>
         </view>
     </view>
 </template>

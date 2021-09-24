@@ -6,6 +6,7 @@
       :bgColor="{ background: '#fff' }"
       :fixed="true"
       :center="true"
+      :isBack="false"
     ></headerBar>
     <swiper :autoplay="true" :circular="true" class="swiperparent">
       <swiper-item v-for="(item, index) in shopbannerlist" :key="index">
@@ -108,6 +109,7 @@ export default {
 			_that.listarguments.channel = _that.channellist[e.currentIndex].secondTypeId;
 			_that.shoplist=[];
 			_that.listarguments.page=1
+      _that.statusmore="loading"
 			_that.shopListApi()
     },
 
@@ -134,7 +136,7 @@ export default {
 					uni.hideLoading();
 					console.log(result.data.count)
 					let shoptotal = result.data.count;
-					_that.shoplist=_that.shoplist.concat(result.data.data);
+					_that.shoplist=_that.shoplist.concat(result.data.data || []);
 					if(shoptotal < _that.listarguments.limit * _that.listarguments.page){
 						_that.statusmore="noMore"
 					}
